@@ -1,0 +1,15 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "additional-rule": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "additional-typescript-only-rule": 0,
+        "@typescript-eslint/no-unused-vars": 0
+      }
+    }
+  ]
+}
