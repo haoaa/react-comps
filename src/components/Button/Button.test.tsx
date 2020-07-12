@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import Button, {ButtonProps} from './Button';
+import Button, {ButtonProps, ButtonSize} from './Button';
 
 test('renders learn react link', () => {
   const { getByText } = render(<Button>信息</Button>);
