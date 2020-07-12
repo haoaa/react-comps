@@ -6,6 +6,7 @@ import './App.css';
 import Ontext from './components/Button/Button'
 import Menu from './components/Menu/Menu'
 import MenuItem from './components/Menu/MenuItem'
+import SubMenu from './components/Menu/SubMenu'
 function App() {
   let [show, ss] = useState(true)
   return (
@@ -18,15 +19,26 @@ function App() {
       <button onClick={()=>{ss(!show)}}>show {show}          
       </button>
       <Menu defaultIndex='0' mode='vertical' onSelect={(index) => console.log(`clicked ${index} item`)} >
-        <MenuItem index={0}>
-          cool link
+      
+        <MenuItem>
+          active
         </MenuItem>
-        <MenuItem disabled index={1}>
+        <MenuItem disabled>
           disabled
-        </MenuItem> 
-        <MenuItem index={2}>
-          cool link 2
-        </MenuItem> 
+        </MenuItem>
+        <MenuItem>
+          xyz
+        </MenuItem>
+        <SubMenu title="dropdown">
+          <MenuItem>
+            drop1
+          </MenuItem>
+        </SubMenu>
+        <SubMenu title="opened">
+          <MenuItem>
+            opened1
+          </MenuItem>
+        </SubMenu>
       </Menu>
     </div>
   );
