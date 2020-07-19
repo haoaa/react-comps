@@ -21,7 +21,7 @@ function App() {
       <Ontext size='sm' btnType="link" target="_blank" href="baidu.com">ssss</Ontext>
       <button onClick={()=>{ss(!show)}}>show {show}          
       </button>
-      <Menu defaultIndex='0' mode='vertical' onSelect={(index) => console.log(`clicked ${index} item`)} >
+      <Menu defaultIndex='0' mode='horizontal' onSelect={(index) => console.log(`clicked ${index} item`)} >
       
         <MenuItem>
           active
@@ -38,6 +38,9 @@ function App() {
           </MenuItem>
         </SubMenu>
         <SubMenu title="opened">
+          <MenuItem>
+            opened1
+          </MenuItem>
           <MenuItem>
             opened1
           </MenuItem>
