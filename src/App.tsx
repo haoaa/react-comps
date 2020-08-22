@@ -8,6 +8,7 @@ import Menu from './components/Menu/Menu'
 import MenuItem from './components/Menu/MenuItem'
 import SubMenu from './components/Menu/SubMenu'
 import Icon from "./components/Icon/icon";
+import Transition from "./components/Transition/transition";
 library.add(fas);
 function App() {
   let [show, ss] = useState(true)
@@ -21,10 +22,21 @@ function App() {
       <Ontext size='sm' btnType="link" target="_blank" href="baidu.com">ssss</Ontext>
       <button onClick={()=>{ss(!show)}}>show {show}          
       </button>
+      <Transition in={show} timeout={300} animation='zoom-in-left'>
+        <section>
+          
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <Ontext size='sm' btnType="danger">ssss</Ontext>
+        </section>
+      </Transition>
       <Menu defaultIndex='0' mode='horizontal' onSelect={(index) => console.log(`clicked ${index} item`)} >
       
         <MenuItem>
           active
+          <Icon icon='arrow-up' theme='danger' size='xs'></Icon>
         </MenuItem>
         <MenuItem disabled>
           disabled
@@ -46,6 +58,7 @@ function App() {
           </MenuItem>
         </SubMenu>
       </Menu>
+      <input type="file" id="input" multiple></input>
     </div>
   );
 }
