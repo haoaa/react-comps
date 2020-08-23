@@ -1,7 +1,19 @@
 {
-  "name": "antd",
+  "name": "haoqid",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "Component",
+    "UI",
+    "React"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
@@ -16,8 +28,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
+    "clean": "rimraf ./dist",
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
@@ -51,8 +64,8 @@
     "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
-    "@types/react": "^16.9.13",
-    "@types/react-dom": "16.9.4",
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
     "@types/react-transition-group": "^4.2.3",
     "@types/storybook__addon-info": "^5.2.1",
     "cross-env": "^7.0.0",
@@ -62,7 +75,7 @@
     "react-docgen-typescript-loader": "^3.6.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
-    "rimraf": "^3.0.1",
+    "rimraf": "^3.0.2",
     "typescript": "3.7.2",
     "webpack": "^4.41.0"
   }
