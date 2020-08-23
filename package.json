@@ -1,6 +1,7 @@
 {
   "name": "haoqid",
   "version": "0.1.0",
+  "description": "react compinents",
   "private": true,
   "main": "dist/index.js",
   "module": "dist/index.js",
