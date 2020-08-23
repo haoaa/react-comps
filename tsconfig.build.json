@@ -6,15 +6,8 @@
     "jsx": "react",
     "declaration": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [    
-    "src/**/*.test.tsx",
-    "src/**/*.stories.tsx",
-    "src/setupTests.ts",
-  ]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx", "src/setupTests.ts", "src/App.*"]
 }

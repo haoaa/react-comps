@@ -24,8 +24,8 @@
     "react-transition-group": "^4.3.0"
   },
   "peerDependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,15 +35,15 @@
     "test:nowatch": "cross-env CI=true react-scripts test",
     "clean": "rimraf ./dist",
     "eject": "react-scripts eject",
-    "build-ts": "tsc -p tsconfig.build.json",
+    "build-ts": "tsc -p tsconfig.build.json ",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+    "xxprepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:nowatch && npm run lint"
+      "pre-commit1": "npm run test:nowatch && npm run lint"
     }
   },
   "eslintConfig": {
@@ -72,8 +72,8 @@
     "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
-    "@types/react": "^16.9.46",
-    "@types/react-dom": "^16.9.8",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "16.9.4",
     "@types/react-transition-group": "^4.2.3",
     "@types/storybook__addon-info": "^5.2.1",
     "cross-env": "^7.0.0",
